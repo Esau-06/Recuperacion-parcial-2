@@ -58,12 +58,32 @@ public class MetodosCola {
             System.out.println("No hay clientes en la cola");
         } else {
             for(ObjCliente o : c){
-                System.out.println(o.getNombre() + "-" + o.getTipoServicio());
+                System.out.println("Nombre: " + o.getNombre() +
+                 "Servicio: " + o.getTipoServicio() + 
+                 "Hora de llegada: " + o.getHoraLlegada());
             }
         }
     }
 
-    public void MostrarTurnos(Queue<ObjCliente> c) {
+    public void MostrarTurnos(Queue<ObjCliente> c, LinkedList<ObjCliente> atendidos) {
+
+            System.out.println("====Clientes Atendidos====");
+            if (atendidos.isEmpty()) {
+                System.out.println("No hay clientes atendidos");
+            } else {
+                for(ObjCliente o : atendidos) {
+                    System.out.println(o.getNombre() + "-" + o.getTipoServicio());
+                }
+            }
+
+            System.out.println("===Clientes pendientes===");
+            if (c.isEmpty()) {
+                System.out.println("No hay clientes en espera");
+            } else {
+                for(ObjCliente o : c) {
+                    System.out.println(o.getNombre() + "-" + o.getTipoServicio());
+                }
+            }   
 
     }
 }

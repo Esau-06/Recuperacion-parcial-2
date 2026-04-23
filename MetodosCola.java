@@ -58,8 +58,8 @@ public class MetodosCola {
             System.out.println("No hay clientes en la cola");
         } else {
             for(ObjCliente o : c){
-                System.out.println("Nombre: " + o.getNombre() +
-                 "Servicio: " + o.getTipoServicio() + 
+                System.out.println("Nombre: " + o.getNombre() + " | " + 
+                "Servicio: " + o.getTipoServicio() + " | " +
                  "Hora de llegada: " + o.getHoraLlegada());
             }
         }

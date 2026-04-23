@@ -57,6 +57,7 @@ public class MetodosCola {
         if (c.isEmpty()) {
             System.out.println("No hay clientes en la cola");
         } else {
+            System.out.println("------ CLIENTES EN LA COLA ------");
             for(ObjCliente o : c){
                 System.out.println("Nombre: " + o.getNombre() + " | " + 
                 "Servicio: " + o.getTipoServicio() + " | " +
@@ -67,21 +68,27 @@ public class MetodosCola {
 
     public void MostrarTurnos(Queue<ObjCliente> c, LinkedList<ObjCliente> atendidos) {
 
-            System.out.println("====Clientes Atendidos====");
+            System.out.println("------ CLIENTES ATENDIDOS ------");
             if (atendidos.isEmpty()) {
                 System.out.println("No hay clientes atendidos");
             } else {
                 for(ObjCliente o : atendidos) {
-                    System.out.println(o.getNombre() + "-" + o.getTipoServicio());
+                    System.out.println("ID: " + o.getId() +
+                               " | Nombre: " + o.getNombre() +
+                               " | Servicio: " + o.getTipoServicio() +
+                               " | Hora: " + o.getHoraLlegada());
                 }
             }
 
-            System.out.println("===Clientes pendientes===");
+            System.out.println("----- CLIENTES PENDIENTES ------");
             if (c.isEmpty()) {
                 System.out.println("No hay clientes en espera");
             } else {
                 for(ObjCliente o : c) {
-                    System.out.println(o.getNombre() + "-" + o.getTipoServicio());
+                    System.out.println("ID: " + o.getId() +
+                               " | Nombre: " + o.getNombre() +
+                               " | Servicio: " + o.getTipoServicio() +
+                               " | Hora: " + o.getHoraLlegada());
                 }
             }   
 
